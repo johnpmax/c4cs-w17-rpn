@@ -16,10 +16,7 @@ def calculate(arg):
         except ValueError:
             arg2 = stack.pop()
             arg1 = stack.pop()
-            if operand == '^':
-                stack.append(int(arg1) ^ int(arg2))
-            else:
-                stack.append(operators[operand](arg1, arg2))
+            stack.append(operators[operand](arg1, arg2))
     return stack.pop()
 
 def main():
